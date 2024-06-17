@@ -1,38 +1,345 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body{
+  width: 100%;
+  margin: 0 auto; /* Center the body content */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  list-style: none; /* Remove default list styles */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  text-decoration: none; /* Remove default link underlines */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navigation Styles */
+nav{
+  z-index: 10001; /* Ensure the nav stays on top */
+}
+
+.navbar {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1em;
+}
+
+nav ul li a {
+  color: #000; /* Default link color */
+}
+
+nav ul li a:hover {
+  text-decoration: underline solid #495E57; /* Underline on hover */
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black; /* Color of the bars */
+  margin: 5px 0;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Menu Visibility */
+.nav-links.visible {
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 100%;
+  background-color: #495E57; /* Background color when menu is open */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header Section */
+.header {
+  background-color: #495e57;
+  padding: 40px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: Markazi;
+  letter-spacing: 1px;
+}
+
+
+h2 {
+  color: #F4CE14;
+  font-size: 64px;
+  font-weight: medium;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.banner p {
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.banner h2, .banner h3 {
+  margin: 0;
+}
+
+.banner h2 {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+
+.banner h3 {
+  margin-top: 0;
+}
+
+
+button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 14px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner-img {
+  position: absolute;
+  right: 13%;
+  top: 15%;
+  width: 400px;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+/* Form and Confirmation */
+form, .confirm {
+  padding: 10px 13%;
+}
+
+.formField {
+  padding: 50px 20px;
+}
+
+input, label {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#book-date, #book-time, #book-guests, #book-occasion {
+  background: #bdbdbd43;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.btnReceive input {
+  padding: 12px 16px;
+  margin-top: 20px;
+  background: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.confirm span {
+  color: blue;
+}
+
+/* Menu Items */
+.menu-container {
+  margin: 110px auto;
+  padding: 10px 13%;
+}
+
+.menu-container h2 {
+  color: #000;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+}
+
+.menu-items {
+  width: 350px;
+  background: #EDEFEE;
+  border-radius: 8px;
+}
+
+.menu-container img {
+  width: 100%;
+  height: 233px;
+  border-radius: 8px;
+}
+
+.menu-content {
+  padding: 5px 15px;
+}
+
+.menu-content .heading {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price {
+  color: #EE9972;
+}
+
+.orderbtn {
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Footer Section */
+footer section {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.company-info img {
+  margin-top: 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.company-info p {
+  width: 320px;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  padding: 8px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon on small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    display: none; /* Hide the nav links by default on small screens */
   }
+
+  .nav-links.visible {
+    display: flex;
+    background: #333333;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  .navbar {
+    background: #fff;
+    padding: 10px 8%;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  .bar {
+    background: #333333; /* Dark bars for the hamburger icon */
+  }
+
+  .banner-img {
+    display: none; /* Hide the banner image on small screens */
+  }
+
+  form, .comfirm {
+    padding: 10px 8%;
+  }
+
+  .header section, .menu-container {
+    padding: 10px 8%;
+  }
+
+  .menu-container {
+    margin: 20px 0;
+  }
+
+  .menu-header {
+    justify-content: flex-start;
+  }
+
+  .menu-items {
+    width: 100%;
+  }
+
+  footer section {
+    padding: 10px 8%;
+    flex-direction: column;
+  }
+
+  .company-info p {
+    width: 100%;
+  }
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
 }
